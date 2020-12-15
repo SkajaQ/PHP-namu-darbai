@@ -117,6 +117,7 @@ $input = array("A", "B", "C", "D");
 $arrayNew = [];
 $output = array(0, 0, 0, 0);
 
+// $range = range('A', 'D');
 
 for ($i = 0; $i <200; $i++){
     $randomIndex = rand(0, 3);
@@ -228,6 +229,8 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
+// array_diff
+
 $array7 = [];
 for ($i = 0; $i < 100; $i++) {
     if (!in_array($array6b[$i], $array6a)) {
@@ -248,7 +251,7 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
-$array8 = [];
+// $array8 = [];
 // for ($i = 0; $i < 100; $i++) {
 //     if ($array6a[$i] == $array6b[$i]) {
 //         array_push($array8, $array6b[$i]);
@@ -360,6 +363,7 @@ echo "<br/>";
 echo "Suma desine: $sum2";
 
 $difference = abs($sum1 - $sum2);
+echo "<br/>";
 echo $difference;
 
 echo "<br/>=======================================<br/>";

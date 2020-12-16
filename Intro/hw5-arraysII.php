@@ -200,9 +200,6 @@ function cmp($arrA, $arrB)
 {
     $a = $arrA["place_in_row"];
     $b = $arrB["place_in_row"];
-    if ($a == $b) {
-        return 0;
-    }
     return ($b <=> $a);
 }
 usort($array6, "cmp");

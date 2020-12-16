@@ -11,8 +11,13 @@ echo "Parašykite funkciją, kurios argumentas būtų tekstas, kuris yra įterpi
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+function toH1($string)
+{
+    return "<h1>$string</h1>";
+}
+echo toH1('test');
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -24,8 +29,15 @@ Rašydami šią funkciją remkitės pirmame uždavinyje parašytą funkciją.";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+function toH($string, $tag)
+{
+    return "<h$tag>$string</h$tag>";
+}
+echo toH('test', rand(1, 6));
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -38,8 +50,34 @@ Keitimui naudokite pirmo uždavinio funkciją.";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+function extractNrs($text) 
+{
+    $modified = '';
+    echo $text;
+    echo "<br/>";
+    for($i=0; $i<strlen($text); $i++) {
+        $char = $text[$i];
+        if (is_numeric($char)) {
+            $nrLength = 0;
+            for ($j = $i; $j < strlen($text); $j++) {
+                $nrLength++;
+                if ($j+1 >= strlen($text) || !is_numeric($text[$j+1])) {
+                    break;
+                }
+                
+            }
+            $modified .= toH1(substr($text, $i, $nrLength));
+            $i += $nrLength-1;
+        } else {
+            $modified .= $char;
+        }
+    }
+    return $modified;
+}
+
+echo extractNrs(md5(time()));
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -51,8 +89,23 @@ Argumentą užrašykite taip, kad būtų galima įvesti tik sveiką skaičių.";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+function healthy($nr) 
+{
+    if (!is_int($nr)) {
+        return "bad number";
+    }
+    $amount = 0;
+    for ($i=2; $i<$nr-1; $i++) {
+        if ($nr%$i === 0) {
+            $amount++;
+        }
+    }
+    return $amount;
+}
+echo healthy(193333);
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -64,8 +117,25 @@ Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, pa
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+$array = []; 
+for ($i = 0; $i < 100; $i++) {
+    $number = rand(33, 77);
+    $array[] = $number;
+}
+var_dump($array);
+
+function cmp($a, $b)
+{
+    $divA = healthy($a);
+    $divB = healthy($b);
+    return ($divB <=> $divA);
+}
+usort($array, "cmp");
+echo "<br/>";
+
+var_dump($array);
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -77,8 +147,22 @@ Naudodami 4 uždavinio funkciją iš masyvo ištrinkite pirminius skaičius.";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+$array = []; 
+for ($i = 0; $i < 100; $i++) {
+    $number = rand(333, 777);
+    $array[] = $number;
+}
+var_dump($array);
+
+for ($i = 0; $i <100; $i++) {
+    if (healthy($array[$i]) === 0) {
+        unset($array[$i]);
+    }
+}
+echo "<br/>";
+var_dump($array);
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 

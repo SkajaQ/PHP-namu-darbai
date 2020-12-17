@@ -175,8 +175,55 @@ Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų. Paskutinio masyvo 
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+function task7() {
+    $arraysContainer = [];
+    $depth = rand(10, 30);
+    for ($i = 0; $i < $depth; $i++) {
+        $arrLength = rand(10,20);
+        $tempArray = [];
+        for ($j = 0; $j < $arrLength; $j++) {
+            if ($j != $arrLength-1) {
+                $tempArray[] = rand(0, 10); 
+            } 
+        }
+        $arraysContainer[] = $tempArray; 
+    }
+    $arrayOfArrays = [];
+    for ($i = $depth-1; $i > -1; $i--) {
+        if ($i+1 < $depth-1) {
+            $arraysContainer[$i][] = $arraysContainer[$i+1];
+        } else {
+            $arraysContainer[$i][] = 0;
+        }
+    }
+    return $arraysContainer[0]);
+}
+task7();
+
+
+// $array = [];
+// function create($depth, $array) {
+
+//     $length = rand(10, 20);
+//     $depth--;
+//     for ($i = 0; $i < $length-1; $i++) {
+//         $number = rand(0, 10);
+//         $array[] = $number;
+//     }
+//     $array[] = [];
+//             if ($depth != 0) {
+//                 $array[$length-1] = create($depth, $array[$length1]);
+//             } else {
+//                 $array[$length] = 0;
+//             }
+//     return $array;
+// }
+
+// var_dump(create(rand(10, 30), $array));
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -187,8 +234,11 @@ echo "Suskaičiuokite septinto uždavinio elementų, kurie nėra masyvai, sumą.
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -202,8 +252,11 @@ echo "Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaič
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -216,8 +269,10 @@ Vėl paskaičiuokite masyvo pirminių skaičių vidurkį ir jeigu mažesnis nei 
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -235,8 +290,11 @@ ir unikalią background spalvą (spalva pvz nepavaizduota).
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 ?>

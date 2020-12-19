@@ -197,9 +197,10 @@ function task7() {
             $arraysContainer[$i][] = 0;
         }
     }
-    return $arraysContainer[0]);
+    return $arraysContainer[0];
 }
-task7();
+var_dump(task7());
+
 
 
 // $array = [];
@@ -235,8 +236,19 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
-
-
+function countNumbers($arr) {
+    $arrLength = count($arr);
+    $sum = 0;
+    for ($i = 0; $i < $arrLength; $i++) {
+        if (is_int($arr[$i])) {
+            $sum += $arr[$i];
+        } else {
+            $sum += countNumbers($arr[$i]);
+        }
+    }
+    return $sum;
+} 
+echo "Sum is " . countNumbers(task7());
 
 
 echo "<br/>=======================================<br/>";
@@ -253,8 +265,40 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
+$array = []; 
+for ($i = 0; $i < 3; $i++) {
+    $number = rand(1, 33);
+    $array[] = $number;
+}
+var_dump($array);
+echo "<br/>";
 
+while (lastNotPrimes($array)) {
+    $number = rand(1, 33);
+    $array[] = $number;
+}
 
+function primeCheck($number){ 
+    if ($number == 1) 
+    return 0; 
+    for ($i = 2; $i <= $number/2; $i++){ 
+        if ($number % $i == 0) 
+            return 0; 
+    } 
+    return 1; 
+} 
+
+function lastNotPrimes($arr) {
+    $arrLength = count($arr);
+    for ($i = $arrLength-3; $i < $arrLength; $i++) {
+        if (!primeCheck($arr[$i])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+var_dump($array);
 
 
 echo "<br/>=======================================<br/>";
@@ -270,7 +314,42 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
+$arrayOfArrays = []; 
+for ($i = 0; $i < 10; $i++) {
+    $array = [];
+    for ($j = 0; $j < 10; $j++) {
+        $number = rand(1, 100);
+        $array[] = $number;
+    }
+    $arrayOfArrays[] = $array;
+}
+var_dump($arrayOfArrays);
+echo "<br/>";
 
+for ($i = 0; $i < 10; $i++) {
+    $value = $arrayOfArrays[$i];
+    while (notValid($value)) {
+        $minIndex = array_keys($value, min($value))[0];
+        $value[$minIndex] = $value[$minIndex] + 3;
+    }
+    var_dump($value);
+    echo "<br/>";
+}
+
+function notValid($arr) {
+    $countPrime = 0;
+    $sumPrime = 0;
+    foreach ($arr as &$value) {
+        if (primeCheck($value)) {
+            $sumPrime += $value;
+            $countPrime++;
+        }
+    }
+    if ($countPrime === 0) {
+        return true;
+    }
+    return ($sumPrime/$countPrime) < 70;
+}
 
 
 echo "<br/>=======================================<br/>";

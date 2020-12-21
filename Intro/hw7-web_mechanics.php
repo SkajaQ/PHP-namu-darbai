@@ -14,8 +14,11 @@ o paspaudus ant nuorodos be perduodamo kintamojo, vėl pasidarytų juodas.";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+$link = "<a href=\"/intro/hw7-webmech/1-black.php\">1-black</a><br/>";
+echo $link;
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -27,8 +30,11 @@ URL eilutėje ranka įvedus GET kintamąjį color su RGB spalvos kodu (pvz color
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+$link = "<a href=\"/intro/hw7-webmech/2-rgb.php\">2-lgbt</a><br/>";
+echo $link;
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -52,8 +58,8 @@ echo "Sukurkite du puslapius <i>lemon.php</i> ir <i>orange.php</i>. Jų fonus nu
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
 echo "<a href=\"/intro/hw7-webmech/lemon.php\">Lemon</a><br/>";
 echo "<a href=\"/intro/hw7-webmech/orange.php\">Orange</a><br/>";
 echo "<br/>=======================================<br/>";

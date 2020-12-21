@@ -370,7 +370,12 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
-
+$arrayOfArrays = []; 
+$length = rand(10, 100);
+for ($i = 0; $i < $length; $i++) {
+    $number = rand(0, 100);
+    $arrayOfArrays[] = $number;
+}
 
 
 

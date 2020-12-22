@@ -45,8 +45,11 @@ echo "Perdarykite 2 uždavinį taip, kad spalvą būtų galimą įrašyti į lau
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+$link = "<a href=\"/intro/hw7-webmech/2-rgb.php\">3-color</a><br/>";
+echo $link;
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -59,9 +62,9 @@ echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
 
-
 echo "<a href=\"/intro/hw7-webmech/lemon.php\">Lemon</a><br/>";
 echo "<a href=\"/intro/hw7-webmech/orange.php\">Orange</a><br/>";
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -74,8 +77,10 @@ o PHP kodas (ne tiesiogiai html tagas!) naršyklę peradresuotų į kitą puslap
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+echo "<a href=\"/intro/hw7-webmech/blue.php\">Blue</a><br/>";
+echo "<a href=\"/intro/hw7-webmech/red.php\">Red</a><br/>";
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 

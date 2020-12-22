@@ -93,8 +93,9 @@ kai paspaustas mygtukas iš GET formos ir geltonai- kai iš POST.';
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+echo "<a href=\"/intro/hw7-webmech/6-button.php\">Button</a><br/>";
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -105,8 +106,9 @@ echo "Pakartokite 6 uždavinį. Papildykite jį kodu, kuris naršyklę po POST m
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+echo "<a href=\"/intro/hw7-webmech/7-postGet.php\">PostGet</a><br/>";
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -119,8 +121,10 @@ Padarykite taip, kad surinkus naršyklėje tiesiogiai adresą į rose.php puslap
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+echo "<a href=\"/intro/hw7-webmech/pink.php\">Pink</a><br/>";
+echo "<a href=\"/intro/hw7-webmech/rose.php\">Rose</a><br/>";
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -133,8 +137,9 @@ rodantis kiek buvo pažymėta checkboksų (ne kurie, o kiek).";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+echo "<a href=\"/intro/hw7-webmech/9-black.php\">9-black</a><br/>";
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -146,8 +151,9 @@ Vienas rodytų kiek buvo pažymėta, o kitas kiek iš vis buvo jų sugeneruota."
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 
@@ -163,8 +169,9 @@ suvesti žaidėjų vardus ir pradėti žaidimą iš naujo.";
 echo "<br/>";
 echo ".......................................";
 echo "<br/>"; 
-$variable = 0;
-echo "Result: $variable";
+
+
+
 echo "<br/>=======================================<br/>";
 echo "<br/>";
 ?>

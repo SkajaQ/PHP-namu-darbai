@@ -6,15 +6,18 @@
     <title>Document</title>
 </head>
 
+
+<?php
+if (isset($_GET['need_redirect'])) {
+    header('Location: http://localhost:3000/intro/hw7-webmech/red.php');
+    die;
+}
+?> 
+
 <body style = "background-color:blue">
 
 <a href="/intro/hw7-web_mechanics.php">Back to WebMechanics</a>
 <br/>
+<a style = "color:black" href="?need_redirect">LINKAS</a>
+<br/>
 </body>
-
-<?php
-
-    header('Location: http://localhost:3000/intro/hw7-webmech/blue.php');
-    die;
-
-?> 

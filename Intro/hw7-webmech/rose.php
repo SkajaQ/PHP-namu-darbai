@@ -13,8 +13,10 @@
 </body>
 
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+} else {
     header('Location: http://localhost:3000/intro/hw7-webmech/pink.php');
     die;
-
+}
 ?> 

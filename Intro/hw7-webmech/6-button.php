@@ -12,25 +12,23 @@
 </form>
 <br>
 <form action="" method="POST">
-<input type="text" name="color" value="<?= $_GET['color'] ?? '' ?>"><br>
+<input type="text" name="color" value="<?= $_POST['color'] ?? '' ?>"><br>
 <button type="submit">Geltonai</button>
 </form>
 
 <?php
 $backcol = "white";
-if (isset($_GET['color'])) {
-    $backcol = "green";
-    echo "<body style = 'background-color: $backcol'>";
-} else if (isset($_POST['color'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $backcol = "yellow";
-    echo "<body style = 'background-color: $backcol'>";
 }
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $backcol = "green";
+}
+echo "<body style = 'background-color: $backcol'>";
 ?>
 
 <body>
-    
 </body>
-
 
 
 </html>

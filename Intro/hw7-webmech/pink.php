@@ -13,16 +13,7 @@
 </body>
 
 <br>
-<form action="" method="POST">
-<input type="text" name="color" value="<?= $_GET['color'] ?? '' ?>"><br>
-<button type="submit">Go to Rose</button>
+<form action="http://localhost:3000/intro/hw7-webmech/rose.php" method="POST">
+<input type="text" name="color" value="<?= $_POST['color'] ?? '' ?>"><br>
+<button type="submit" name="submitform">Go to Rose</button>
 </form>
-
-<?php
-
-
-
-    // header('Location: http://localhost:3000/intro/hw7-webmech/orange.php');
-    die;
-
-?> 

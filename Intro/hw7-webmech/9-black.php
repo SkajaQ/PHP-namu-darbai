@@ -9,20 +9,30 @@
 </body>
 
 <form action="" method="POST">
-<input type="text" name="color" value="<?= $_GET['color'] ?? '' ?>"><br>
-<button type="submit">Skaiciuoti</button>
+<button type="submit" name="submitform">Skaiciuoti</button>
+<?php
+$checkBox = rand(3, 10);
+$array = range('A','Z');
+for ($i = 0; $i < $checkBox; $i++) {
+    echo '<input type="checkbox" name="A" value="">';
+    echo $array[$i];
+}
+?>
 </form>
 
 <?php
-if (isset($_POST['color'])) {
+if (isset($_POST['submitform'])) {
     $backgroundColor = '#fff';
 } else {
     $backgroundColor = '#000';
 }
 
-$checkBox = rand(3, 10);
-for ($i = 0; $i < $checkBox; $i++) {
-    echo '<input type="checkbox" name="c" value="">';
+if(isset($_POST['submitform']))
+{
+    echo 'labas';
+} else {
+    echo 'iki';
+    $formDisplay = 'block';
 }
 ?>
 
@@ -31,6 +41,16 @@ body {
     background: <?= $backgroundColor ?>;
     color: #fff;
 }
+form {
+    display: <?php 
+        if (isset($_POST['submitform'])) {
+            echo 'none';
+        } else {
+            echo 'block';
+        }
+        ?>;
+}
+
 </style>
 
 

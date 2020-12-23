@@ -1,3 +1,11 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    header('Location: http://localhost:3000/intro/hw7-webmech/pink.php');
+    die;
+}
+?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +19,3 @@
 <a href="/intro/hw7-web_mechanics.php">Back to WebMechanics</a>
 <br/>
 </body>
-
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-} else {
-    header('Location: http://localhost:3000/intro/hw7-webmech/pink.php');
-    die;
-}
-?> 
